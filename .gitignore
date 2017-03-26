@@ -1,4 +1,5 @@
 node_modules
 coverage
 config.js
-server_url
+server_url.txt
+reload.txt
