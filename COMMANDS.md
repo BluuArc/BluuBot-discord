@@ -3,7 +3,7 @@
 ## General
 * The general format of input into the bot is as follows: `|bb [unit|item] [search queries]`
     * The `|bb` can be changed to some other starting command liks `~bb` via the `config.js` file.
-    * Note that `|bb` is using the pipe character (under the backspace and above the enter key), not a lowercase L.
+    * Note that `|bb` is using the [pipe character](https://en.wikipedia.org/wiki/Vertical_bar) (under the backspace and above the enter key on a QWERTY keyboard), not a lowercase L.
 * Some terminology for commands
     * `--p_<command>` is the format for commands used to printing stuff
     * `--l_<command>` is the format for commands used to list stuff
@@ -119,8 +119,8 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 | Command | Description | 
 | :---: | :---: | 
 | `--l_range` | list units in a given range of guide or unit IDs
-| `--l_start` \<number> | for range and count; starting value; -1 is default |
-| `--l_end` \<number> | for range only; ending value; -1 is default |
+| `--l_start <number>` | for range and count; starting value; -1 is default |
+| `--l_end <number>` | for range only; ending value; -1 is default |
 | `--l_type <string>` | type of search; possible options include guide (for guide ID) and unit (for unit ID); defaults to guide
 
 * EX: `|bb unit --l_range --l_type unit --l_start 60660 --l_end 60670` prints all units whose ID starts with 60660 and the first unit above 60670
@@ -145,7 +145,7 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 | `--type <string>` | search based on the item type. Possible types include material, consumable, sphere, evomat, summoner\_consumable, and ls\_sphere | `\|bb item --type ls_sphere` lists all the LS spheres you can use in SArc | |
 | `--desc <string>` | search based on an item's description | `\|bb item --desc guild raid` lists all the items with guild raid in their description | see note below this table about searching using name or description | 
 | `--effect <string>` | search based an item's effects (raw JSON) | `\|bb item --effect hit increase/hit` lists all spheres with a hit count buff | see note below this table about JSON searches |
-| `--sphere_type \<string>` | search based on a sphere type. Possible types include Status Boost, Critical, Drop, Status Ailment, Damage Reducing, Status Ailments Resistant, BB Gauge, HP Recovery, Expose Target, Damage Reflecting, Spark, Defense Penetrating, Atk Boosting, and Special | `\|bb item --sphere_type Defense Penetrating` lists all the spheres that have the type Defense Penetrating 
+| `--sphere_type <string>` | search based on a sphere type. Possible types include Status Boost, Critical, Drop, Status Ailment, Damage Reducing, Status Ailments Resistant, BB Gauge, HP Recovery, Expose Target, Damage Reflecting, Spark, Defense Penetrating, Atk Boosting, and Special | `\|bb item --sphere_type Defense Penetrating` lists all the spheres that have the type Defense Penetrating 
 | `--server <string>` | search based on what server it's on (eu, gl, or jp) | `\|bb item grail --server eu` lists the EU version of The Grail sphere | |
 
 * Your searches can be further refined by chaining some of these together
