@@ -3,6 +3,7 @@
 ## General
 * The general format of input into the bot is as follows: `|bb [unit|item] [search queries]`
     * The `|bb` can be changed to some other starting command liks `~bb` via the `config.js` file.
+    * Note that `|bb` is using the pipe character (under the backspace and above the enter key), not a lowercase L.
 * Some terminology for commands
     * `--p_<command>` is the format for commands used to printing stuff
     * `--l_<command>` is the format for commands used to list stuff
