@@ -39,7 +39,7 @@
 | `--move_speed <string>` | search based on move speed (1-5) | `\|bb unit --move_speed 5` lists all units with a move speed of 5 | |
 | `--ls_desc <string>` | search based on its LS name or description | `\|bb unit --ls_desc reduction` lists all units with the word "reduction" in their leader skill | see note below this table about searching using name or description |
 | `--ls_effect <string>` | search based LS buffs (raw JSON) | `\|bb unit --ls_effect xp gained increase` lists all units with some form of XP buff on LS | see note below this table about JSON searches |
-| `--bb_desc \<string>` | search based on its bb name or description | `\|bb unit --bb_desc bc efficacy` lists all units who have "BC efficacy" in their BB description | see note below this table about searching using name or description |
+| `--bb_desc <string>` | search based on its bb name or description | `\|bb unit --bb_desc bc efficacy` lists all units who have "BC efficacy" in their BB description | see note below this table about searching using name or description |
 | `--bb_effect <string>` | search based BB buffs (raw JSON) | `\|bb unit --bb_effect ailments cured` lists all units who cure status ailments on BB | see note below this table about JSON searches |
 | `--sbb_desc <string>` | search based on its SBB name or description | `\|bb unit --sbb_desc remaining HP` lists all units who have an HP scaling SBB | see note below this table about searching using name or description |
 | `--sbb_effect <string>` | search based SBB buffs (raw JSON) | `\|bb unit --sbb_effect bc fill when attacked` lists all units with the BC fill when attacked buff on SBB | see note below this table about JSON searches |
