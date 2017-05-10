@@ -31,7 +31,7 @@
 
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
-| none (i.e. just name only) | search for a unit by name | `\|bb unit Zekuu` prints the info for Zekuu's OE form | |
+| none (i.e. just name only) | search for a unit by name or ID | `\|bb unit Zekuu` prints the info for Zekuu's OE form | |
 | `--rarity <string>` | search for a unit based on a rarity (1-8) | `\|bb unit --rarity 8` lists all the units in their OE form | |
 | `--element <string>` | search based on element (fire, water, earth, thunder, light, or dark) | `\|bb unit --element fire` lists all the fire units | |
 | `--gender <string>` | search based on gender (male,female,or other) | `\|bb unit --gender other` lists all the genderless units | |
@@ -139,6 +139,7 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
+| none (i.e. just name only) | search for an item by name or ID | `\|bb unit heaven's edge` prints the info for Heaven's Edge | |
 | `--rarity <string>` | search based on rarity (0-7) | `\|bb item --rarity 7` lists all the items that have a 7\* rarity | |
 | `--type <string>` | search based on the item type. Possible types include material, consumable, sphere, evomat, summoner\_consumable, and ls\_sphere | `\|bb item --type ls_sphere` lists all the LS spheres you can use in SArc | |
 | `--desc <string>` | search based on an item's description | `\|bb item --desc guild raid` lists all the items with guild raid in their description | see note below this table about searching using name or description | 
