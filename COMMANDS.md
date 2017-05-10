@@ -31,27 +31,27 @@
 
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
-| none (i.e. just name only) | search for a unit by name | `|bb unit Zekuu` prints the info for Zekuu's OE form | |
-| --rarity \<string> | search for a unit based on a rarity (1-8) | `|bb unit --rarity 8` lists all the units in their OE form | |
-| --element \<string> | search based on element (fire, water, earth, thunder, light, or dark) | `|bb unit --element fire` lists all the fire units | |
-| --gender \<string> | search based on gender (male,female,or other) | `|bb unit --gender other` lists all the genderless units | |
-| --move_speed \<string> | search based on move speed (1-5) | `|bb unit --move_speed 5` lists all units with a move speed of 5 | |
-| --ls_desc \<string> | search based on its LS name or description | `|bb unit --ls_desc reduction` lists all units with the word "reduction" in their leader skill | see note below this table about searching using name or description |
-| --ls_effect \<string> | search based LS buffs (raw JSON) | `|bb unit --ls_effect xp gained increase` lists all units with some form of XP buff on LS | see note below this table about JSON searches |
-|--bb_desc \<string> | search based on its bb name or description | `|bb unit --bb_desc bc efficacy` lists all units who have "BC efficacy" in their BB description | see note below this table about searching using name or description |
-| --bb_effect \<string> | search based BB buffs (raw JSON) | `|bb unit --bb_effect ailments cured` lists all units who cure status ailments on BB | see note below this table about JSON searches |
-| --sbb_desc \<string> | search based on its SBB name or description | `|bb unit --sbb_desc remaining HP` lists all units who have an HP scaling SBB | see note below this table about searching using name or description |
-| --sbb_effect \<string> | search based SBB buffs (raw JSON) | `|bb unit --sbb_effect bc fill when attacked` lists all units with the BC fill when attacked buff on SBB | see note below this table about JSON searches |
-| --ubb_desc \<string> | search based on its UBB name or description | `|bb unit --ubb_desc raising allies` lists all the units with the raising allies from KO buff (i.e. revive) on UBB | see note below this table about searching using name or description | 
-| --ubb_effect \<string> | search based UBB buffs (raw JSON) | `|bb unit --ubb_effect hit increase buff` lists all the units with a hit count buff on UBB | see note below this table about JSON searches |
-| --es_desc \<string> | search based on its ES name or description | `|bb unit --es_desc negates all status ailments` lists all units with negates all status ailments on their ES | see note below this table about searching using name or description | 
-| --es_effect \<string> | search based ES buffs (raw JSON) | `|bb unit --es_effect mitigation for elemental attacks` lists all hte units who have some form of elemental mitigation on their ES | see note below this table about JSON searches |
-| --sp_desc \<string> | search based on its SP names or descriptions | `|bb unit --sp_desc status ailment removal` lists all units who can cleanse ailments via SP | see note below this table about searching using name or description | 
-| --sp_effect \<string> | search based sp buffs (raw JSON) | `|bb unit --sp_effect add to bb` lists all the units who add something to their BB via SP | see note below this table about JSON searches |
-| --server \<string> | search based on what server it's on (gl, eu, or jp) | `|bb unit arthur --server GL` lists the info of Arthur for global instead of a result listing for Arthur on EU and GL | |
-| --all_desc \<string> | search based on its all of it's names and descriptions | `|bb unit --all_desc damage reduction for 2 turns` lists all the units with some form of mitigation that lasts 2 turns on LS, ES, BB, SBB, UBB, or SP | see note below this table about searching using name or description | 
-| --all_effect \<string> | search based on all of its effects (raw JSON) | `|bb unit --all_effect angel idol` lists all the units with some form of angel idol on LS, ES, BB, SBB, UBB, or SP | see note below this table about JSON searches |
-| --strict | Use this flag to always return the full results instead of the shortened results | `|bb unit Feeva --strict` returns a search listing of all of Feeva's forms instead of just printing her OE info
+| none (i.e. just name only) | search for a unit by name | `\|bb unit Zekuu` prints the info for Zekuu's OE form | |
+| `--rarity <string>` | search for a unit based on a rarity (1-8) | `\|bb unit --rarity 8` lists all the units in their OE form | |
+| `--element <string>` | search based on element (fire, water, earth, thunder, light, or dark) | `\|bb unit --element fire` lists all the fire units | |
+| `--gender <string>` | search based on gender (male,female,or other) | `\|bb unit --gender other` lists all the genderless units | |
+| `--move_speed <string>` | search based on move speed (1-5) | `\|bb unit --move_speed 5` lists all units with a move speed of 5 | |
+| `--ls_desc <string>` | search based on its LS name or description | `\|bb unit --ls_desc reduction` lists all units with the word "reduction" in their leader skill | see note below this table about searching using name or description |
+| `--ls_effect <string>` | search based LS buffs (raw JSON) | `\|bb unit --ls_effect xp gained increase` lists all units with some form of XP buff on LS | see note below this table about JSON searches |
+| `--bb_desc \<string>` | search based on its bb name or description | `\|bb unit --bb_desc bc efficacy` lists all units who have "BC efficacy" in their BB description | see note below this table about searching using name or description |
+| `--bb_effect <string>` | search based BB buffs (raw JSON) | `\|bb unit --bb_effect ailments cured` lists all units who cure status ailments on BB | see note below this table about JSON searches |
+| `--sbb_desc <string>` | search based on its SBB name or description | `\|bb unit --sbb_desc remaining HP` lists all units who have an HP scaling SBB | see note below this table about searching using name or description |
+| `--sbb_effect <string>` | search based SBB buffs (raw JSON) | `\|bb unit --sbb_effect bc fill when attacked` lists all units with the BC fill when attacked buff on SBB | see note below this table about JSON searches |
+| `--ubb_desc <string>` | search based on its UBB name or description | `\|bb unit --ubb_desc raising allies` lists all the units with the raising allies from KO buff (i.e. revive) on UBB | see note below this table about searching using name or description | 
+| `--ubb_effect <string>` | search based UBB buffs (raw JSON) | `\|bb unit --ubb_effect hit increase buff` lists all the units with a hit count buff on UBB | see note below this table about JSON searches |
+| `--es_desc <string>` | search based on its ES name or description | `\|bb unit --es_desc negates all status ailments` lists all units with negates all status ailments on their ES | see note below this table about searching using name or description | 
+| `--es_effect <string>` | search based ES buffs (raw JSON) | `\|bb unit --es_effect mitigation for elemental attacks` lists all hte units who have some form of elemental mitigation on their ES | see note below this table about JSON searches |
+| `--sp_desc <string>` | search based on its SP names or descriptions | `\|bb unit --sp_desc status ailment removal` lists all units who can cleanse ailments via SP | see note below this table about searching using name or description | 
+| `--sp_effect <string>` | search based sp buffs (raw JSON) | `\|bb unit --sp_effect add to bb` lists all the units who add something to their BB via SP | see note below this table about JSON searches |
+| `--server <string>` | search based on what server it's on (gl, eu, or jp) | `\|bb unit arthur --server GL` lists the info of Arthur for global instead of a result listing for Arthur on EU and GL | |
+| `--all_desc <string>` | search based on its all of it's names and descriptions | `\|bb unit --all_desc damage reduction for 2 turns` lists all the units with some form of mitigation that lasts 2 turns on LS, ES, BB, SBB, UBB, or SP | see note below this table about searching using name or description | 
+| `--all_effect <string>` | search based on all of its effects (raw JSON) | `\|bb unit --all_effect angel idol` lists all the units with some form of angel idol on LS, ES, BB, SBB, UBB, or SP | see note below this table about JSON searches |
+| `--strict` | Use this flag to always return the full results instead of the shortened results | `\|bb unit Feeva --strict` returns a search listing of all of Feeva's forms instead of just printing her OE info
 
 
 * Queries for each command aren't limited to those commands (e.g. you could search for `hit increase buff` in BB or SBB as well, not only UBB), but there may be some buffs that are exclusive to a specific part of the unit, such as timed buffs only being found on LS or ES.
@@ -96,18 +96,18 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
-| --translate | Print the translation from Japanese to English of a unit. Uses Google Translate API. | `|bb unit 51156 --translate` prints the translation for the JP version of Juno Seto | |
-| --p_ls | Print the raw leader skill data of a unit | `|bb unit Zeis --p_ls` prints the raw JSON data of Zeis's LS | can be used to find possible search queries for buffs
-| --p_es | Print the raw extra skill data of a unit | `|bb unit galea --p_es` prints the raw JSON data of Galea's ES | can be used to find possible search queries for buffs
-| --p_bb | Print the raw brave burst data of a unit | `|bb unit wannahon --p_bb` prints the raw JSON data of Wannahon's BB | can be used to find possible search queries for buffs
-| --p_sbb | Print the raw sbb data of a unit | `|bb unit durumn --p_sbb` prints the raw JSON data of Durumn's SBB | can be used to find possible search queries for buffs
-| --p_ubb | Print the raw ubb data of a unit | `|bb unit ceulfan --p_ubb` prints the raw JSON data for Ceulfan's UBB | can be used to find possible search queries for buffs
-| --p_sp | Print the SP data of a unit, does not require raw flag | `|bb unit keres --p_sp` prints out the SP options for Keres | can be used to find possible search queries for buffs
-| --p_sp_skill \<string> | Print the raw JSON data of a unit's SP option given an ID or index | `|bb unit keres --p_sp_skill 9` and `|bb unit keres --p_sp_skill 1000001026` print the raw JSON data of the SP option `[30 SP] | (Special) - Adds Light, Dark damage reduction for 1 turn effect to BB/SBB (1000001026,9)` from Keres | can be used to find possible search queries for buffs; at the end of every SP listing is an ordered pair of numbers and either number can be used to print that SP skill's info. In this example, the ordered pair is (1000001026,9), meaning that you could either use 1000001026 or 9 as the input to this command
-| --p_evo | Print the evolution data of a unit | `|bb unit vargas --rarity 7 --p_evo` prints out the evolution materials to go from 7\* Vargas to OE Vargas | |
-| --p_arena | Print the raw arena data of a unit | `|bb unit selena --p_arena` prints out the arena data for Selena | |  
-| --p_stats | Print the stats table of a unit; it features the base stats along with the maxed lord, anima, etc. stats of a unit and its imp caps | `|bb unit Eze --rarity 8 --p_stats` prints the stats table for OE Eze
-| --p_hitcount <string> | Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb) | `|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB | Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table | 
+| `--translate` | Print the translation from Japanese to English of a unit. Uses Google Translate API. | `\|bb unit 51156 --translate` prints the translation for the JP version of Juno Seto | |
+| `--p_ls` | Print the raw leader skill data of a unit | `\|bb unit Zeis --p_ls` prints the raw JSON data of Zeis's LS | can be used to find possible search queries for buffs
+| `--p_es` | Print the raw extra skill data of a unit | `\|bb unit galea --p_es` prints the raw JSON data of Galea's ES | can be used to find possible search queries for buffs
+| `--p_bb` | Print the raw brave burst data of a unit | `\|bb unit wannahon --p_bb` prints the raw JSON data of Wannahon's BB | can be used to find possible search queries for buffs
+| `--p_sbb` | Print the raw sbb data of a unit | `\|bb unit durumn --p_sbb` prints the raw JSON data of Durumn's SBB | can be used to find possible search queries for buffs
+| `--p_ubb` | Print the raw ubb data of a unit | `\|bb unit ceulfan --p_ubb` prints the raw JSON data for Ceulfan's UBB | can be used to find possible search queries for buffs
+| `--p_sp` | Print the SP data of a unit, does not require raw flag | `\|bb unit keres --p_sp` prints out the SP options for Keres | can be used to find possible search queries for buffs
+| `--p_sp_skill <string>` | Print the raw JSON data of a unit's SP option given an ID or index | `\|bb unit keres --p_sp_skill 9` and `|bb unit keres --p_sp_skill 1000001026` print the raw JSON data of the SP option `[30 SP] | (Special) - Adds Light, Dark damage reduction for 1 turn effect to BB/SBB (1000001026,9)` from Keres | can be used to find possible search queries for buffs; at the end of every SP listing is an ordered pair of numbers and either number can be used to print that SP skill's info. In this example, the ordered pair is (1000001026,9), meaning that you could either use 1000001026 or 9 as the input to this command
+| `--p_evo` | Print the evolution data of a unit | `\|bb unit vargas --rarity 7 --p_evo` prints out the evolution materials to go from 7\* Vargas to OE Vargas | |
+| `--p_arena` | Print the raw arena data of a unit | `\|bb unit selena --p_arena` prints out the arena data for Selena | |  
+| `--p_stats` | Print the stats table of a unit; it features the base stats along with the maxed lord, anima, etc. stats of a unit and its imp caps | `|\bb unit Eze --rarity 8 --p_stats` prints the stats table for OE Eze
+| `--p_hitcount` <string> | Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb) | `\|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB | Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table | 
 
 * Some of the commands can be chained together, but if the combined result passes the character limit, nothing or an error is shown.
 
@@ -117,10 +117,10 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 
 | Command | Description | 
 | :---: | :---: | 
-| --l_range | list units in a given range of guide or unit IDs
-| --l_start \<number> | for range and count; starting value; -1 is default |
-| --l_end \<number> | for range only; ending value; -1 is default |
-| --l_type \<string> | type of search; possible options include guide (for guide ID) and unit (for unit ID); defaults to guide
+| `--l_range` | list units in a given range of guide or unit IDs
+| `--l_start` \<number> | for range and count; starting value; -1 is default |
+| `--l_end` \<number> | for range only; ending value; -1 is default |
+| `--l_type <string>` | type of search; possible options include guide (for guide ID) and unit (for unit ID); defaults to guide
 
 * EX: `|bb unit --l_range --l_type unit --l_start 60660 --l_end 60670` prints all units whose ID starts with 60660 and the first unit above 60670
 * EX: `|bb unit --l_range --l_start 1600` prints all units whose guide ID is 1600 or larger
@@ -139,12 +139,12 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
-| --rarity \<string> | search based on rarity (0-7) | `|bb item --rarity 7` lists all the items that have a 7\* rarity | |
-| --type \<string> | search based on the item type. Possible types include material, consumable, sphere, evomat, summoner\_consumable, and ls\_sphere | `|bb item --type ls_sphere` lists all the LS spheres you can use in SArc | |
-| --desc \<string> | search based on an item's description | `|bb item --desc guild raid` lists all the items with guild raid in their description | see note below this table about searching using name or description | 
-| --effect \<string> | search based an item's effects (raw JSON) | `|bb item --effect hit increase/hit` lists all spheres with a hit count buff | see note below this table about JSON searches |
-| --sphere\_type \<string> | search based on a sphere type. Possible types include Status Boost, Critical, Drop, Status Ailment, Damage Reducing, Status Ailments Resistant, BB Gauge, HP Recovery, Expose Target, Damage Reflecting, Spark, Defense Penetrating, Atk Boosting, and Special | `|bb item --sphere_type Defense Penetrating` lists all the spheres that have the type Defense Penetrating 
-| --server \<string> | search based on what server it's on (eu, gl, or jp) | `|bb item grail --server eu` lists the EU version of The Grail sphere | |
+| `--rarity <string>` | search based on rarity (0-7) | `\|bb item --rarity 7` lists all the items that have a 7\* rarity | |
+| `--type <string>` | search based on the item type. Possible types include material, consumable, sphere, evomat, summoner\_consumable, and ls\_sphere | `\|bb item --type ls_sphere` lists all the LS spheres you can use in SArc | |
+| `--desc <string>` | search based on an item's description | `\|bb item --desc guild raid` lists all the items with guild raid in their description | see note below this table about searching using name or description | 
+| `--effect <string>` | search based an item's effects (raw JSON) | `\|bb item --effect hit increase/hit` lists all spheres with a hit count buff | see note below this table about JSON searches |
+| `--sphere_type \<string>` | search based on a sphere type. Possible types include Status Boost, Critical, Drop, Status Ailment, Damage Reducing, Status Ailments Resistant, BB Gauge, HP Recovery, Expose Target, Damage Reflecting, Spark, Defense Penetrating, Atk Boosting, and Special | `\|bb item --sphere_type Defense Penetrating` lists all the spheres that have the type Defense Penetrating 
+| `--server <string>` | search based on what server it's on (eu, gl, or jp) | `\|bb item grail --server eu` lists the EU version of The Grail sphere | |
 
 * Your searches can be further refined by chaining some of these together
     * EX: `|bb item --sphere_type status boost --rarity 7` lists all the Status Boost spheres with a rarity of 7
@@ -178,10 +178,10 @@ http://2.cdn.bravefrontier.gumi.sg/content/item/sphere_thum_5_2.png
 
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
-| --translate | Print the translation from Japanese to English of an item. Uses Google Translate API. | `|bb item 47214 --translate` prints the translation for item 47214 | |
-| --p_effects | Print the effect(s) of an item | `|bb item leto crown --p_effects` prints out the effects for Leto Crown | can be used to find possible search queries for buffs
-| --p_recipe | Print the crafting recipe of an item | `|bb item lunar essence orb --p_recipe` prints out the recipe to make Lunar Essence Orb | |
-| --p_usage | Print the items that use this item as a crafting material | `|bb item distilled ether --p_usage` prints out the items that use Distilled Ether as a crafting material | |
-| --p_location | Print where this item can be found. Uses the GL and EU wiki | `|bb item sacred jewel --p_location` prints out places where you can obtain a Sacred Jewel | Pulls data from either wiki and posts that information. JP items are not supported at this time. |
+| `--translate` | Print the translation from Japanese to English of an item. Uses Google Translate API. | `\|bb item 47214 --translate` prints the translation for item 47214 | |
+| `--p_effects` | Print the effect(s) of an item | `\|bb item leto crown --p_effects` prints out the effects for Leto Crown | can be used to find possible search queries for buffs
+| `--p_recipe` | Print the crafting recipe of an item | `\|bb item lunar essence orb --p_recipe` prints out the recipe to make Lunar Essence Orb | |
+| `--p_usage` | Print the items that use this item as a crafting material | `\|bb item distilled ether --p_usage` prints out the items that use Distilled Ether as a crafting material | |
+| `--p_location` | Print where this item can be found. Uses the GL and EU wiki | `\|bb item sacred jewel --p_location` prints out places where you can obtain a Sacred Jewel | Pulls data from either wiki and posts that information. JP items are not supported at this time. |
 
 * Some of the commands can be chained together, but if the combined result passes the character limit, nothing or an error is shown.
