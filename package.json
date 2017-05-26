@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "bot": "node ./lib/index.js",
+    "local_bot": "node ./lib/local.js",
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
