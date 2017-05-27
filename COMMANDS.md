@@ -187,3 +187,13 @@ http://2.cdn.bravefrontier.gumi.sg/content/item/sphere_thum_5_2.png
 | `--p_location` | Print where this item can be found. Uses the GL and EU wiki | `\|bb item sacred jewel --p_location` prints out places where you can obtain a Sacred Jewel | Pulls data from either wiki and posts that information. JP items are not supported at this time. |
 
 * Some of the commands can be chained together, but if the combined result passes the character limit, nothing or an error is shown.
+
+---
+
+## Other
+
+| Command | Description | Example | Notes |
+| :---: | :---: | :---: | :---: |
+| `\|bb bfdb` | Prints out information about server updates in an embedded message | | |
+| `\|bb about` | Prints out some general info about the bot itseld | | Links back to this GitHub repository |
+| `\|bb about --uptime`| Prints out the time since the bot was last updated | | | 
