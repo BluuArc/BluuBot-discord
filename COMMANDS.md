@@ -16,6 +16,12 @@
 * Tips
     * Results too long? Try adding another search parameter (such as element, rarity, or server) to further refine your results. 
         * This can also save you an extra command. For example, getting the info for the EU version of Arthur can easily be done in one command with `|bb unit arthur --server EU` instead of using `|bb unit arthur` and getting the correct ID based on that.
+* API Changes
+    * As of May 27, 2017
+        * Introduced embedding formatting for most messages; can still use old text format by putting `--noembed` in your command query.
+        * Some small aliasing has been done in that background, so that typing in stuff like `--print_evo`, `--print_sbb`, and `--list_range` is equivalent to `--p_evo`, `--p_sbb`, and `--l_range`, respectively.
+        * For embedded messages, I've introduced `--print_raw_effects` to print the stats for all of a unit's LS, ES, BB, SBB, and UBB in a single post, where applicable.
+        * `--print_hitcount <string>` has changed to `--print_hitcounts` to print all of the hitcounts of a single unit.
 
 ---
 
@@ -98,17 +104,20 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 | Command | Description | Example | Notes |
 | :---: | :---: | :---: | :---: |
 | `--translate` | Print the translation from Japanese to English of a unit. Uses Google Translate API. | `\|bb unit 51156 --translate` prints the translation for the JP version of Juno Seto | |
-| `--p_ls` | Print the raw leader skill data of a unit | `\|bb unit Zeis --p_ls` prints the raw JSON data of Zeis's LS | can be used to find possible search queries for buffs
-| `--p_es` | Print the raw extra skill data of a unit | `\|bb unit galea --p_es` prints the raw JSON data of Galea's ES | can be used to find possible search queries for buffs
-| `--p_bb` | Print the raw brave burst data of a unit | `\|bb unit wannahon --p_bb` prints the raw JSON data of Wannahon's BB | can be used to find possible search queries for buffs
-| `--p_sbb` | Print the raw sbb data of a unit | `\|bb unit durumn --p_sbb` prints the raw JSON data of Durumn's SBB | can be used to find possible search queries for buffs
-| `--p_ubb` | Print the raw ubb data of a unit | `\|bb unit ceulfan --p_ubb` prints the raw JSON data for Ceulfan's UBB | can be used to find possible search queries for buffs
+| `--p_raw_effects` | Prints out the raw JSON data of a unit's LS, ES, BB, SBB, and UBB where applicable | `\|bb unit feeva --print_raw_effects` prints the raw JSON data for Feeva | can be used to find possible search queries for buffs; applicable only when not using `--noembed`
+| `--p_ls` | Print the raw leader skill data of a unit | `\|bb unit Zeis --p_ls --noembed` prints the raw JSON data of Zeis's LS | can be used to find possible search queries for buffs
+| `--p_es` | Print the raw extra skill data of a unit | `\|bb unit galea --p_es --noembed` prints the raw JSON data of Galea's ES | can be used to find possible search queries for buffs
+| `--p_bb` | Print the raw brave burst data of a unit | `\|bb unit wannahon --p_bb --noembed` prints the raw JSON data of Wannahon's BB | can be used to find possible search queries for buffs
+| `--p_sbb` | Print the raw sbb data of a unit | `\|bb unit durumn --p_sbb --noembed` prints the raw JSON data of Durumn's SBB | can be used to find possible search queries for buffs
+| `--p_ubb` | Print the raw ubb data of a unit | `\|bb unit ceulfan --p_ubb --noembed` prints the raw JSON data for Ceulfan's UBB | can be used to find possible search queries for buffs
 | `--p_sp` | Print the SP data of a unit, does not require raw flag | `\|bb unit keres --p_sp` prints out the SP options for Keres | can be used to find possible search queries for buffs
-| `--p_sp_skill <string>` | Print the raw JSON data of a unit's SP option given an ID or index | `\|bb unit keres --p_sp_skill 9` and `|bb unit keres --p_sp_skill 1000001026` print the raw JSON data of the SP option `[30 SP] | (Special) - Adds Light, Dark damage reduction for 1 turn effect to BB/SBB (1000001026,9)` from Keres | can be used to find possible search queries for buffs; at the end of every SP listing is an ordered pair of numbers and either number can be used to print that SP skill's info. In this example, the ordered pair is (1000001026,9), meaning that you could either use 1000001026 or 9 as the input to this command
+| `--p_sp_skill <string>` | Print the raw JSON data of a unit's SP option given an ID or index | `\|bb unit keres --p_sp_skill 9` and `|bb unit keres --p_sp_skill 1000001026 --noembed` print the raw JSON data of the SP option `[30 SP] | (Special) - Adds Light, Dark damage reduction for 1 turn effect to BB/SBB (1000001026,9)` from Keres | can be used to find possible search queries for buffs; at the end of every SP listing is an ordered pair of numbers and either number can be used to print that SP skill's info. In this example, the ordered pair is (1000001026,9), meaning that you could either use 1000001026 or 9 as the input to this command
 | `--p_evo` | Print the evolution data of a unit | `\|bb unit vargas --rarity 7 --p_evo` prints out the evolution materials to go from 7\* Vargas to OE Vargas | |
 | `--p_arena` | Print the raw arena data of a unit | `\|bb unit selena --p_arena` prints out the arena data for Selena | |  
 | `--p_stats` | Print the stats table of a unit; it features the base stats along with the maxed lord, anima, etc. stats of a unit and its imp caps | `|\bb unit Eze --rarity 8 --p_stats` prints the stats table for OE Eze
-| `--p_hitcount` <string> | Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb) | `\|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB | Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table | 
+| ~~`--p_hitcount <string>`~~ | ~~Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb)~~ | ~~`\|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB~~ | ~~Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table~~; replaced with `--p_hitcounts` as of May 27, 2017 | 
+| `--p_hitounts` | Same as the old `--p_hitcount <string>`, but prints out the data for all types of attacks for a unit instead of a single one | `\|bb unit gabriela --p_hitcounts` prints out the hit count table of Gabriela normal attacks, BB, SBB, and UBB | You can attach `--noembed` at the end to print out the tables that are too large for embedded messages.
+
 
 * Some of the commands can be chained together, but if the combined result passes the character limit, nothing or an error is shown.
 
