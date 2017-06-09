@@ -206,6 +206,7 @@ http://2.cdn.bravefrontier.gumi.sg/content/item/sphere_thum_5_2.png
 | `--l_start <number>` | starting value for listing IDs; -1 is default |
 | `--l_end <number>` | ending value for listing IDs; -1 is default |
 
+* You only need to specify either `list_start` or `list_end` for the command to activate; both can be used together.
 * EX: `|bb item --list_start 20000 --list_end 30000` prints all items whose ID is between 20000 and 30000 inclusively.
 * EX: `|bb item --l_start 50000` lists all the items whose ID is greater than or equal to with 50000.
 
