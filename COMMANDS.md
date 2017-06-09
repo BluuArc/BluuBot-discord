@@ -123,17 +123,18 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 
 ### Listing Units
 * Typing in `|bb unit --list_help` will give you a shortened version of what's in this section
-* There are two types of listing options: `l_range` and `l_count`
+* ~~There are two types of listing options: `l_range` and `l_count`~~
+    * The bot and server now only support `l_range` as of June 9, 2017
 
 | Command | Description | 
 | :---: | :---: | 
-| `--l_range` | list units in a given range of guide or unit IDs
+| ~~`--l_range`~~ | ~~list units in a given range of guide or unit IDs~~ Deprecated as of June 9, 2017; no longer necessary
 | `--l_start <number>` | for range and count; starting value; -1 is default |
 | `--l_end <number>` | for range only; ending value; -1 is default |
 | `--l_type <string>` | type of search; possible options include guide (for guide ID) and unit (for unit ID); defaults to guide
 
-* EX: `|bb unit --l_range --l_type unit --l_start 60660 --l_end 60670` prints all units whose ID starts with 60660 and the first unit above 60670
-* EX: `|bb unit --l_range --l_start 1600` prints all units whose guide ID is 1600 or larger
+* EX: `|bb unit --l_type unit --l_start 60660 --l_end 60670` prints all units whose ID is between 60660 and 60670 inclusively
+* EX: `|bb unit --l_start 1600` prints all units whose guide ID is 1600 or larger
 
 ---
 
