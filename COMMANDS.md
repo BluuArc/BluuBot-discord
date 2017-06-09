@@ -197,6 +197,18 @@ http://2.cdn.bravefrontier.gumi.sg/content/item/sphere_thum_5_2.png
 
 * Some of the commands can be chained together, but if the combined result passes the character limit, nothing or an error is shown.
 
+### Listing Items
+* Typing in `|bb item --list_help` will give you a shortened version of what's in this section
+
+| Command | Description | 
+| :---: | :---: | 
+| `--l_start <number>` | starting value for listing IDs; -1 is default |
+| `--l_end <number>` | ending value for listing IDs; -1 is default |
+
+* EX: `|bb item --list_start 20000 --list_end 30000` prints all items whose ID is between 20000 and 30000 inclusively.
+* EX: `|bb item --l_start 50000` lists all the items whose ID is greater than or equal to with 50000.
+
+
 ---
 
 ## Other
