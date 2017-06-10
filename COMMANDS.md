@@ -22,6 +22,10 @@
         * Some small aliasing has been done in that background, so that typing in stuff like `--print_evo`, `--print_sbb`, and `--list_range` is equivalent to `--p_evo`, `--p_sbb`, and `--l_range`, respectively.
         * For embedded messages, I've introduced `--print_raw_effects` to print the stats for all of a unit's LS, ES, BB, SBB, and UBB in a single post, where applicable.
         * `--print_hitcount <string>` has changed to `--print_hitcounts` to print all of the hitcounts of a single unit.
+    * As of June 9, 2017
+        * Printing out a certain number of units is no longer supported. All listing commands now only require a range of IDs.
+    * As of June 10, 2017
+        * Added `--print_art` command for units
 
 ---
 
@@ -117,6 +121,7 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 | `--p_stats` | Print the stats table of a unit; it features the base stats along with the maxed lord, anima, etc. stats of a unit and its imp caps | `|\bb unit Eze --rarity 8 --p_stats` prints the stats table for OE Eze
 | ~~`--p_hitcount <string>`~~ | ~~Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb)~~ | ~~`\|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB~~ | ~~Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table~~; replaced with `--p_hitcounts` as of May 27, 2017 | 
 | `--p_hitounts` | Same as the old `--p_hitcount <string>`, but prints out the data for all types of attacks for a unit instead of a single one | `\|bb unit gabriela --p_hitcounts` prints out the hit count table of Gabriela normal attacks, BB, SBB, and UBB | You can attach `--noembed` at the end to print out the tables that are too large for embedded messages.
+| `--p_art` | Print the art of a unit. Note that this sends multiple messages, one for each image, when using embeds so please be cautious when using it | `\| bb unit selena --p_art` prints out the regular and alternate art for Selena | You can attach `--noembed` at the end to print out just the links for the art.
 
 
 * Some of the commands can be chained together, but if the combined result passes the character limit, nothing or an error is shown.
