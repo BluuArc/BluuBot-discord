@@ -215,6 +215,73 @@ http://2.cdn.bravefrontier.gumi.sg/content/item/sphere_thum_5_2.png
 * EX: `|bb item --list_start 20000 --list_end 30000` prints all items whose ID is between 20000 and 30000 inclusively.
 * EX: `|bb item --l_start 50000` lists all the items whose ID is greater than or equal to with 50000.
 
+---
+
+## ES/Extra Skills
+
+* For this section, the general format for input is `|bb es [name] [--p_command(s) [flag, if any]]`
+* Elgifs are part of this section as well.
+
+### Searching ES
+* Typing in `|bb es --search_help` will give you a shortened version of what's in this section
+* Not using any of these commands below will make the bot only search by name or ES ID
+    * EX: `|bb es aeterno` will only list items with aeterno in the name
+
+| Command | Description | Example | Notes |
+| :---: | :---: | :---: | :---: |
+| none (i.e. just name only) | search for an ES by name or ID | | |
+| `--desc <string>` | search based on an ES's description | | see note below this table about searching using name or description | 
+| `--effects <string>` | search based an ES's effects (raw JSON) | `\|bb es --effects hit increase/hit` lists all ES with a hit count buff | see note below this table about JSON searches |
+| `--server <string>` | search based on what server it's on (eu, gl, or jp) | | |
+
+* Your searches can be further refined by chaining some of these together
+* For commands that search by name or description, they only work for items that are already in English (i.e. don't need `--translate` by default).
+* For commands that use JSON, refer to how buffs are worded in JSON form (via `--p_effects`).
+    * For example, spark buffs are worded as `damage% for spark`. So searching `|bb es --effects for spark` will give a list of all items that have a spark buff
+
+### Printing ES
+* Typing in `|bb es --print_help` will give you a shortened version of what's in this section
+* Not using any of these commands below will make the bot print the general info of an item
+* If more than one item exists in the search results, the bot will print the output in a similar format to the output below (this is the output for `|bb es aeterno`).
+```
+Multiple ES/Elgifs found. Please try the command again using one of the IDs below.
+---
+Ignis Aeterno Lv. 1 (8000101)
+Algor Aeterno Lv. 1 (8000102)
+Terra Aeterno Lv. 1 (8000103)
+Fulgur Aeterno Lv. 1 (8000104)
+Lux Aeterno Lv. 1 (8000105)
+Umbra Aeterno Lv. 1 (8000106)
+Ignis Aeterno Lv. 2 (8000201)
+Algor Aeterno Lv. 2 (8000202)
+Terra Aeterno Lv. 2 (8000203)
+Fulgur Aeterno Lv. 2 (8000204)
+Lux Aeterno Lv. 2 (8000205)
+Umbra Aeterno Lv. 2 (8000206)
+```
+* EX: `|bb es healer's lament` will print the info for Healer's Lament in a similar format to the output below.
+```
+Healer's Lament (1013700)
+Availability: GL, EU, JP
+Desc: 50% boost to Def, max HP, full HP recovery each turn & damage taken considerably restores HP
+---
+http://2.cdn.bravefrontier.gumi.sg/content/item/sphere_thum_5_2.png
+```
+
+| Command | Description | Example | Notes |
+| :---: | :---: | :---: | :---: |
+| `--translate` | Print the translation from Japanese to English of an item. Uses Google Translate API. | | |
+| `--p_effects` | Print the effect(s) of an item | `\|bb es first god's miracle --p_effects` prints out the effects for First God's Miracle | can be used to find possible search queries for buffs
+
+### Listing Items
+* Typing in `|bb es --list_help` will give you a shortened version of what's in this section
+
+| Command | Description | 
+| :---: | :---: | 
+| `--l_start <number>` | starting value for listing IDs; -1 is default |
+| `--l_end <number>` | ending value for listing IDs; -1 is default |
+
+* You only need to specify either `list_start` or `list_end` for the command to activate; both can be used together.
 
 ---
 
