@@ -26,6 +26,8 @@
         * Printing out a certain number of units is no longer supported. All listing commands now only require a range of IDs.
     * As of June 10, 2017
         * Added `--print_art` command for units
+    * As of July 13, 2017
+        * Reintroduced `--print_ls`, `--print_es`, `--print_bb`, `--print_sbb`, and `--print_ubb` for embeds
 
 ---
 
@@ -109,11 +111,11 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 | :---: | :---: | :---: | :---: |
 | `--translate` | Print the translation from Japanese to English of a unit. Uses Google Translate API. | `\|bb unit 51156 --translate` prints the translation for the JP version of Juno Seto | |
 | `--p_raw_effects` | Prints out the raw JSON data of a unit's LS, ES, BB, SBB, and UBB where applicable | `\|bb unit feeva --print_raw_effects` prints the raw JSON data for Feeva | can be used to find possible search queries for buffs; applicable only when not using `--noembed`
-| `--p_ls` | Print the raw leader skill data of a unit | `\|bb unit Zeis --p_ls --noembed` prints the raw JSON data of Zeis's LS | can be used to find possible search queries for buffs
-| `--p_es` | Print the raw extra skill data of a unit | `\|bb unit galea --p_es --noembed` prints the raw JSON data of Galea's ES | can be used to find possible search queries for buffs
-| `--p_bb` | Print the raw brave burst data of a unit | `\|bb unit wannahon --p_bb --noembed` prints the raw JSON data of Wannahon's BB | can be used to find possible search queries for buffs
-| `--p_sbb` | Print the raw sbb data of a unit | `\|bb unit durumn --p_sbb --noembed` prints the raw JSON data of Durumn's SBB | can be used to find possible search queries for buffs
-| `--p_ubb` | Print the raw ubb data of a unit | `\|bb unit ceulfan --p_ubb --noembed` prints the raw JSON data for Ceulfan's UBB | can be used to find possible search queries for buffs
+| `--p_ls` | Print more data for the leader skill of a unit | `\|bb unit Zeis --p_ls` prints the raw JSON data of Zeis's LS | can be used to find possible search queries for buffs
+| `--p_es` | Print more data for the extra skill of a unit | `\|bb unit galea --p_es` prints the raw JSON data of Galea's ES | can be used to find possible search queries for buffs
+| `--p_bb` | Print more data for the brave burst of a unit | `\|bb unit wannahon --p_bb` prints the raw JSON data of Wannahon's BB | can be used to find possible search queries for buffs
+| `--p_sbb` | Print more data for the sbb of a unit | `\|bb unit durumn --p_sbb` prints the raw JSON data of Durumn's SBB | can be used to find possible search queries for buffs
+| `--p_ubb` | Print more data for the ubb of a unit | `\|bb unit ceulfan --p_ubb` prints the raw JSON data for Ceulfan's UBB | can be used to find possible search queries for buffs
 | `--p_sp` | Print the SP data of a unit, does not require raw flag | `\|bb unit keres --p_sp` prints out the SP options for Keres | can be used to find possible search queries for buffs
 | `--p_sp_skill <string>` | Print the raw JSON data of a unit's SP option given an ID or index | `\|bb unit keres --p_sp_skill 9` and `|bb unit keres --p_sp_skill 1000001026 --noembed` print the raw JSON data of the SP option `[30 SP] | (Special) - Adds Light, Dark damage reduction for 1 turn effect to BB/SBB (1000001026,9)` from Keres | can be used to find possible search queries for buffs; at the end of every SP listing is an ordered pair of numbers and either number can be used to print that SP skill's info. In this example, the ordered pair is (1000001026,9), meaning that you could either use 1000001026 or 9 as the input to this command
 | `--p_evo` | Print the evolution data of a unit | `\|bb unit vargas --rarity 7 --p_evo` prints out the evolution materials to go from 7\* Vargas to OE Vargas | |
