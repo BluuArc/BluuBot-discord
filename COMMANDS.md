@@ -30,6 +30,8 @@
         * Reintroduced `--print_ls`, `--print_es`, `--print_bb`, `--print_sbb`, and `--print_ubb` for embeds
     * As of July 18, 2017
         * Added `--print_json` and `--print_json_property path/to/property` for units
+    * As of July 19, 2017
+        * `--print_hitcount <string>` has been reintroduced for embeds
 
 ---
 
@@ -123,8 +125,8 @@ http://2.cdn.bravefrontier.gumi.sg/content/unit/img/unit_ills_full_61057.png
 | `--p_evo` | Print the evolution data of a unit | `\|bb unit vargas --rarity 7 --p_evo` prints out the evolution materials to go from 7\* Vargas to OE Vargas | |
 | `--p_arena` | Print the raw arena data of a unit | `\|bb unit selena --p_arena` prints out the arena data for Selena | |  
 | `--p_stats` | Print the stats table of a unit; it features the base stats along with the maxed lord, anima, etc. stats of a unit and its imp caps | `|\bb unit Eze --rarity 8 --p_stats` prints the stats table for OE Eze
-| ~~`--p_hitcount <string>`~~ | ~~Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb)~~ | ~~`\|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB~~ | ~~Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table~~; replaced with `--p_hitcounts` as of May 27, 2017 | 
-| `--p_hitounts` | Same as the old `--p_hitcount <string>`, but prints out the data for all types of attacks for a unit instead of a single one | `\|bb unit gabriela --p_hitcounts` prints out the hit count table of Gabriela normal attacks, BB, SBB, and UBB | You can attach `--noembed` at the end to print out the tables that are too large for embedded messages.
+| `--p_hitcount <string>` | Print the hit count table of a specified field of a unit (normal, bb, sbb, ubb) | `\|bb unit gabriela --p_hitcount sbb` prints out the hit count table of Gabriela's SBB | Supports most units with 2-tier attacks (like Gabriela); units with random hits will only have one hit shown on the table | 
+| `--p_hitcounts` | Same as the old `--p_hitcount <string>`, but prints out the data for all types of attacks for a unit instead of a single one | `\|bb unit gabriela --p_hitcounts` prints out the hit count table of Gabriela normal attacks, BB, SBB, and UBB | You can attach `--noembed` at the end to print out the tables that are too large for embedded messages.
 | `--p_art` | Print the art of a unit. Note that this sends multiple messages, one for each image, when using embeds so please be cautious when using it | `\|bb unit selena --p_art` prints out the regular and alternate art for Selena | You can attach `--noembed` at the end to print out just the links for the art.
 | `--p_json` | Print the entire stringified version of the JSON object. | ~~`\|bb unit vargas --rarity 2 --p_json` prints the entire JSON object for 2* Vargas | **WARNING:** this outputs a lot of text, so use carefully. I'm not responsible for anything that happens using this in the wrong place; does not print more than 5 messages worth of text |
 | `--p_json_property path/to/property` | Prints the stringified version of the specified property in the JSON object | `\|bb unit frosty --p_json_property movement/skill` prints the skill movement data for Frosty | **WARNING:** this can output a lot of text, so use carefully. I'm not responsible for anything that happens using this in the wrong place; does not print more than 5 messages worth of text |
